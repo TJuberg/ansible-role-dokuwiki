@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    dokuwiki_group: nobody
+    dokuwiki_user: nobody
+  tasks:
+    - name: "Include ansible-role-dokuwiki"
+      include_role:
+        name: "ansible-role-dokuwiki"
